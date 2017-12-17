@@ -1,0 +1,105 @@
+body {
+  min-height: 360px;
+  padding-top: 1em;
+  background-color: #AA3939;
+  background-image: radial-gradient(#fff 10%, transparent 10%), radial-gradient(#fff 10%, transparent 10%);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+body * {
+  text-align: center;
+}
+
+#section-quote {
+  /*
+  border: 3px solid green;
+  */
+  padding: 1em;
+}
+
+#getQuoteButton {
+  position: relative;
+  border: 1px solid #636;
+  background-color: #636;
+  color: white;
+  box-shadow: 4px 4px 0 #888;
+}
+
+#getQuoteButton:hover {
+  background-color: #3f0e3f;
+}
+
+#getQuoteButton:active {
+  top: 3px;
+  left: 3px;
+  box-shadow: none;
+}
+
+#ajax-btn {
+  position: relative;
+  margin-left: 12px;
+  border: 1px solid #0275d8;
+  box-shadow: 4px 4px 0 #888;
+}
+
+#ajax-btn:active {
+  top: 3px;
+  left: 3px;
+  box-shadow: none;
+}
+
+
+/***************************************/
+
+.wrapper {
+  max-width: 640px;
+  min-height: 8em;
+  margin: 2em auto;
+  border: 4px dashed #d46a6a;
+  border-radius: 1em;
+  padding: 1.5em;
+  box-shadow: 0 0 0 3px #d46a6a, 0 0 0 5px #ffaaaa, 0 0 0 8px #d46a6a, 0 0 2px 10px #d46a6a;
+  background-color: #ffaaaa;
+  color: #550000;
+}
+
+#quote-content {
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 1.5em;
+}
+
+#quote-author {
+  font-style: italic;
+}
+
+
+/***************************************/
+
+footer {
+}
+
+#tweet-div {}
+
+#tweet {
+  position: relative;
+  padding: 8px 12px;
+  border: 1px solid #55ACEE;
+  border-radius: 5px;
+  background-color: #55acee;
+  color: white;
+  font-size: 1em;
+  text-decoration: none;
+  box-shadow: 4px 4px 0 #888;
+}
+
+#tweet:active {
+  top: 3px;
+  left: 3px;
+  box-shadow: none;
+}
+
+#tweet:hover {
+  background-color: #0d7ed5;
+}
