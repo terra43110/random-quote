@@ -16,8 +16,8 @@ var quoteObject = [
         content: "The nature of space reflects what it wants to be."
     },
     {
-      author: "Scott Adams",
-      content: "Ideas are worthless. Execution is everything."
+        author: "Scott Adams",
+        content: "Ideas are worthless. Execution is everything."
     },
     {
         author: "Ellen Lupton",
@@ -69,7 +69,7 @@ $( function() {
     $('#getQuoteButton').on('click', function(event) {
         console.clear();
         console.log('clear');
-        
+
         event.preventDefault();
 
         var randomIndex = Math.floor(Math.random() * quoteObject.length);
@@ -88,29 +88,29 @@ $( function() {
         quoteAuthor.innerHTML = "";
         quoteAuthor.appendChild(randomAuthorElm);
     });
-  
+
     $('#ajax-btn').on('click', function(event) {
-      console.clear();
-      console.log('Request Random Quote');
-      
-      var url = "https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous";
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', url, true);
-      xhr.setRequestHeader("X-Mashape-Key", "snUFZyuBfSmshuHu3ZbRpkUlc88ip1EQaR1jsnm9QrE8Y8yNh7");
-      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-      xhr.setRequestHeader("Accept", "application/json");
-      xhr.send();
-      
-      var requestedQuote, requestedAuthor, data;
-      xhr.addEventListener('load', function(loadEvent) {
-        console.log(xhr.getAllResponseHeaders());
-        data = JSON.parse(xhr.responseText);
-        console.log(data);
-        quoteContent.textContent = data.quote;
-        quoteAuthor.textContent = data.author;
-      });
-           
-     });
+        console.clear();
+        console.log('Request Random Quote');
+
+        var url = "https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous";
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.setRequestHeader("X-Mashape-Key", "snUFZyuBfSmshuHu3ZbRpkUlc88ip1EQaR1jsnm9QrE8Y8yNh7");
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.send();
+
+        var requestedQuote, requestedAuthor, data;
+        xhr.addEventListener('load', function(loadEvent) {
+            console.log(xhr.getAllResponseHeaders());
+            data = JSON.parse(xhr.responseText);
+            console.log(data);
+            quoteContent.textContent = data.quote;
+            quoteAuthor.textContent = data.author;
+        });
+
+    });
 
     var $tweet = $('#tweet');
     $tweet.on('click', function(event) {
